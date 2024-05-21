@@ -514,10 +514,10 @@
 </div> 
 </div>
 </div> 
-<!-- <div class="row">
+<div class="row">
 <div class="col-lg-6">
 <div class="contact-form pt-30">
-<form id="contact-form" action="assets/contact.php">
+<form id="contact-form" action="https://docs.google.com/spreadsheets/d/1K-GqWkO6Vxwnu5DdNjoUOhCK_Qr-wVIdHlYqQW3m2I0/edit?usp=sharing">
 <div class="single-form">
 <input type="text" name="name" placeholder="Name">
 </div> 
@@ -531,64 +531,7 @@
 <div class="single-form">
 <button class="main-btn" type="submit">Send Message</button>
 </div> 
-</form> -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Submit to Google Form</title>
-</head>
-<body>
-
-<div class="row">
-    <div class="col-lg-6">
-        <div class="contact-form pt-30">
-            <form id="contact-form" action="https://docs.google.com/spreadsheets/d/1K-GqWkO6Vxwnu5DdNjoUOhCK_Qr-wVIdHlYqQW3m2I0/edit?usp=sharing" method="POST">
-                <div class="single-form">
-                    <input type="text" name="Name" id="name" placeholder="Name">
-                </div> 
-                <div class="single-form">
-                    <input type="email" name="Email" id="email" placeholder="Email">
-                </div> 
-                <div class="single-form">
-                    <textarea name="Message" id="message" placeholder="Message"></textarea>
-                </div> 
-                <p class="form-message"></p>
-                <div class="single-form">
-                    <button class="main-btn" type="submit" id="submitBtn">Send Message</button>
-                </div> 
-            </form>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Function to handle form submission
-    function submitForm(event) {
-        event.preventDefault(); // Prevent default form submission behavior
-
-        var form = document.getElementById('contact-form');
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-
-        xhr.open('POST', form.action);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                // Handle successful form submission
-                console.log('Form submitted successfully!');
-                // Optionally, you can reset the form after successful submission
-                form.reset();
-            }
-        };
-
-        xhr.send(formData);
-    }
-
-    // Attach event listener to form submit button
-    document.getElementById('submitBtn').addEventListener('click', submitForm);
-</script>
-
-</body>
-</html>
+</form>
 
 
 </div> 
